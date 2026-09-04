@@ -82,12 +82,14 @@
 
       /* Forces all story images inside the card to scale responsively */
       .card img.responsive-img {
-          width: 100%;
-          margin-left: -20px;
+          width: calc(100% + 40px); /* Expands past the parent padding */
+          max-width: none;
+          margin-left: -20px;       /* Pulls the image left to align with the screen edge */
           height: auto;
           display: block;
           margin-top: 15px;
       }
+
     </style>
 </head>
 <body>
