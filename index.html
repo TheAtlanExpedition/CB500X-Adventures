@@ -14,13 +14,13 @@
     
     <!-- CSS Style Rules to apply the font and responsive scaling -->
     <style>
-      /* Centering layout on the page background */
+      /* 1. Global Page Layout — Modified for edge-to-edge header */
       body {
           margin: 0;
-          padding: 20px;
+          padding: 0 0 20px 0; /* Removed side padding so header hits the screen edges */
           min-height: 100vh;
           display: flex;
-          justify-content: center;
+          flex-direction: column; 
           align-items: center;
           box-sizing: border-box;
           background-color: #f5f5f5;
@@ -30,32 +30,59 @@
       h2, h3, h4, p, figcaption {
           font-family: "Edu NSW ACT Cursive", cursive;
       }
-     /* STICKY HEADER RULES */
-      h1 {
-          font-family: "Merriweather", serif;
-          position: sticky;       /* Locks the element in place when scrolling */
-          top: 0;                 /* Sticks it to the very top edge of the window */
-          z-index: 100;           /* Forces it to stay floating on top of images */
-          background-color: #CC0000; /* Matches background color so text underneath doesn't bleed through */
-          width: 100%;
-          max-width: 600px;       /* Matches your card width */
-          margin: 0;
-          padding: 20px 0;        /* Adds clean spacing around the text */
-          text-align: center;
-      }
-      h4 {
-          font-weight: normal; /* Makes h4 regular weight instead of bold */
+      
+      /* THE STICKY BACKGROUND BANNER HEADER — NOW FULL WIDTH */
+      .header-container {
+          position: sticky;       /* Keeps the entire header locked to the top */
+          top: 0;                 /* Pins it to the very top edge of the window */
+          z-index: 1000;          /* Floating layer weight above story images */
+          
+          width: 100%;            /* Spans 100% of the screen width */
+          max-width: 100%;        /* Removes the 600px restriction */
+          height: 140px;          /* Sets a fixed height for your banner header */
+          margin: 0 0 20px 0;     /* Clean margin below the banner before story content starts */
+          
+          /* BACKGROUND IMAGE SETTINGS */
+          background-image: linear-gradient(rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.2)), 
+                            url("https://raw.githubusercontent.com/TheAtlanExpedition/CB500X-Adventures/refs/heads/main/Images/20260704_111639.jpg");
+          background-size: cover;       /* Stretches the image to fill the banner box */
+          background-position: center;  /* Centers the image within the banner box */
+          
+          display: flex;          
+          align-items: center;    /* Vertically centers the text inside the banner */
+          justify-content: center; /* Centers the inner content track */
+          box-sizing: border-box;
       }
 
-      /* Responsive container that keeps text locked to image width */
+      /* Inner alignment track to keep text aligned with the story below */
+      .header-container h1 {
+          font-family: "Merriweather", serif;
+          margin: 0;
+          font-size: 2.2rem;      
+          line-height: 1.2;       
+          text-align: left;       
+          color: #000000;         
+          width: 100%;
+          max-width: 600px;       /* Matches your card width so text lines up perfectly */
+          padding: 0 20px;        /* Keeps the text from hugging the absolute edges on mobile */
+          box-sizing: border-box;
+      }
+
+      h4 {
+          font-weight: normal; 
+      }
+
+      /* Responsive story container */
       .card {
           width: 100%;
-          max-width: 600px; /* Limits size on desktop, scales fluidly on mobile */
+          max-width: 600px; 
           display: block;
+          padding: 0 20px;        /* Adds back side padding so text doesn't touch phone screen borders */
+          box-sizing: border-box;
       }
 
-      /* Forces all images inside the card to scale responsively */
-      .card img, .responsive-img {
+      /* Forces all story images inside the card to scale responsively */
+      .card img.responsive-img {
           width: 100%;
           height: auto;
           display: block;
@@ -73,9 +100,11 @@
     </style>
 </head>
 <body>
-  <section style="text-align: center;" class="card">
-    <figure>  
-    <h1>The Atlan Expedition</h1>
+ 
+  <div class="header-container">
+    <h1>The Atlan<br>Expedition</h1>
+    </div>
+   <section style="text-align: center;" class="card">
     <h2>My Adventures On The CB500X</h2>
     <h3>My first ride on dirt and with street tyres no less.</h3>
     <h4 style="text-align: left;">Blackdown Tablelands,</h4>
