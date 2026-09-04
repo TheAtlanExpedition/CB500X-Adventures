@@ -1,64 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Atlan Expedition</title>
-  
-  <!-- FONTS: Corrected the URLs so the fonts fetch properly -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-</head>
-<body style="margin: 0; padding: 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; background-color: #f5f5f5;">
+    <title>My Practice Page</title>
+    <!-- FONTS -->
+    <!-- Headers, Paragraphs and Figcaptions -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Titles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Style Rules to apply the font and responsive scaling -->
+    <style>
+      /* Centering layout on the page background */
+      body {
+          margin: 0;
+          padding: 20px;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          background-color: #f5f5f5;
+      }
 
-  <!-- The responsive container card centering everything and wrapping the images fluidly -->
-  <section style="text-align: center; width: 100%; max-width: 600px;">
-    <figure style="margin: 0; padding: 0;">  
-      
-      <!-- Main Title (Merriweather) -->
-      <h1 style="font-family: 'Merriweather', serif; text-align: center; margin: 0 0 10px 0;">
-        The Atlan Expedition
-      </h1>
-      
-      <!-- Subheading 1 (Edu NSW ACT Cursive) -->
-      <h2 style="font-family: 'Edu NSW ACT Cursive', cursive; margin: 0 0 10px 0;">
-        My Adventures On The CB500X
-      </h2>
-      
-      <!-- Subheading 2 (Edu NSW ACT Cursive) -->
-      <h3 style="font-family: 'Edu NSW ACT Cursive', cursive; margin: 0 0 15px 0;">
-        My first ride on dirt and with street tyres no less.
-      </h3>
-      
-      <!-- Location Header (Edu NSW ACT Cursive & Not Bold) -->
-      <h4 style="font-family: 'Edu NSW ACT Cursive', cursive; font-weight: normal; text-align: left; margin: 0 0 10px 0;">
-        Blackdown Tablelands,
-      </h4>
-      
-      <!-- Paragraphs (Edu NSW ACT Cursive) -->
-      <p style="font-family: 'Edu NSW ACT Cursive', cursive; text-align: left; line-height: 1.5; margin: 0 0 15px 0;">
-        It was intimidating to start with but I'd already gotten some good advice online about standing, essentailly "stand when you don't want to and sit when it's easy".
-      </p>
-      
-      <p style="font-family: 'Edu NSW ACT Cursive', cursive; text-align: left; line-height: 1.5; margin: 0 0 15px 0;">
-        The corrogation didn't help with the street tyres and pressures, I was slowing to a crawl around corners to avoid slipping on the gravel, keep in mind this was before I'd gotten any protection for me or the bike.
-      </p>
-      
-      <!-- First Image scaling fluidly to container -->
-      <img src="https://raw.githubusercontent.com/TheAtlanExpedition/CB500X-Adventures/refs/heads/main/Images/20260704_122043.jpg" alt="CB500X on the way up blackdown tablelands." style="width: 100%; height: auto; display: block; margin-bottom: 30px;">
+      /* Font Families */
+      h2, h3, h4, p, figcaption {
+          font-family: "Edu NSW ACT Cursive", cursive;
+      }
+      h1 {
+          font-family: "Merriweather", serif;
+      }
+      h4 {
+          font-weight: normal; /* Makes h4 regular weight instead of bold */
+      }
+
+      /* Responsive container that keeps text locked to image width */
+      .card {
+          width: 100%;
+          max-width: 600px; /* Limits size on desktop, scales fluidly on mobile */
+          display: block;
+      }
+
+      /* Forces all images inside the card to scale responsively */
+      .card img, .responsive-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-top: 15px;
+      }
+
+      /* Clean spacing between the two figure sections */
+      figure {
+          margin: 0 0 40px 0;
+          padding: 0;
+      }
+      figure:last-child {
+          margin-bottom: 0;
+      }
+    </style>
+</head>
+<body>
+  <section style="text-align: center;" class="card">
+    <figure>  
+    <h1>The Atlan Expedition</h1>
+    <h2>My Adventures On The CB500X</h2>
+    <h3>My first ride on dirt and with street tyres no less.</h3>
+    <h4 style="text-align: left;">Blackdown Tablelands,</h4>
+    <p style="text-align: left;">It was intimidating to start with but I'd already gotten some good advice online about standing, essentailly "stand when you don't want to and sit when it's easy".</p>
+    <p style="text-align: left;">The corrogation didn't help with the street tyres and pressures, I was slowing to a crawl around corners to avoid slipping on the gravel, keep in mind this was before I'd gotten any protection for me or the bike.</p>
+    <img src="https://raw.githubusercontent.com/TheAtlanExpedition/CB500X-Adventures/refs/heads/main/Images/20260704_122043.jpg" alt="CB500X on the way up blackdown tablelands." class="responsive-img">
     </figure>
     
-    <figure style="margin: 0; padding: 0;">  
-      <p style="font-family: 'Edu NSW ACT Cursive', cursive; text-align: left; line-height: 1.5; margin: 0 0 15px 0;">
-        There were some great views around Blackdown Tablelands, this was on the way up the mountain on the side of the sealed road was a pitstop with some stones arranged for an unofficial camp fire.
-      </p>
-      
-      <p style="font-family: 'Edu NSW ACT Cursive', cursive; text-align: left; line-height: 1.5; margin: 0 0 15px 0;">
-        At the top of the mountain was an incredible view a short walk from the rest stop just before the road turned to dirt.</p>
-      
-      <!-- Second Image scaling fluidly to container -->
-      <img src="https://raw.githubusercontent.com/TheAtlanExpedition/CB500X-Adventures/refs/heads/main/Images/20260704_111719.jpg" alt="View from top of Blackdown Tablelands." style="width: 100%; height: auto; display: block;">
+    <figure>  
+    <p style="text-align: left;">There were some great views around Blackdown Tablelands, this was on the way up the mountain on the side of the sealed road was a pitstop with some stones arranged for an unofficial camp fire.</p>
+    <p style="text-align: left;">At the top of the mountain was an incredible view a short walk from the rest stop just before the road turned to dirt.</p>
+    <img src="https://raw.githubusercontent.com/TheAtlanExpedition/CB500X-Adventures/refs/heads/main/Images/20260704_111719.jpg" alt="View from top of Blackdown Tablelands." class="responsive-img">
     </figure>      
   </section>  
 
