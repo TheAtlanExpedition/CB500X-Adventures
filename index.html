@@ -30,8 +30,18 @@
       h2, h3, h4, p, figcaption {
           font-family: "Edu NSW ACT Cursive", cursive;
       }
+     /* STICKY HEADER RULES */
       h1 {
           font-family: "Merriweather", serif;
+          position: sticky;       /* Locks the element in place when scrolling */
+          top: 0;                 /* Sticks it to the very top edge of the window */
+          z-index: 100;           /* Forces it to stay floating on top of images */
+          background-color: #CC0000; /* Matches background color so text underneath doesn't bleed through */
+          width: 100%;
+          max-width: 600px;       /* Matches your card width */
+          margin: 0;
+          padding: 20px 0;        /* Adds clean spacing around the text */
+          text-align: center;
       }
       h4 {
           font-weight: normal; /* Makes h4 regular weight instead of bold */
